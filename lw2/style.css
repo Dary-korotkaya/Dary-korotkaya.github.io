@@ -1,25 +1,69 @@
 body {
-    background-color: rgb(60, 75, 160);
+    background-color: rgb(217, 216, 255);
     font-family: Arial, sans-serif;
 }
 
 h1 {
-    color: #f8f8f8;
+    color: #000000;
+    font-weight: 1000;
 }
 h2 {
-    color: #f8f8f8;
+    color: #000000;
 }
 h3 {
-    color: #f8f8f8;
+    color: #000000;
 }
 p {
-    color: #f8f8f8;
+    color: #000000;
 }
 a {
     color: #000000;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px; 
 }
+
 .container {
     max-width: 1440px; 
     margin: 0 auto; 
     padding: 20px; 
+}
+.description1 {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.description2 {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.description3 {
+    text-align: right;
+    margin-bottom: 20px;
+}
+.no-bullets {
+    list-style: none; 
+    padding-left: 20px;  
+}
+
+.film-img {
+    width: 300px;  
+    height: 400px; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+
+}
+@font-face {
+    font-family: font1;
+    src: url(ofont.ru_Uncage.ttf);
+}
+@font-face {
+    font-family: font2;
+    src: url(ofont.ru_Optimus.ttf);
+}
+@font-face {
+    font-family: font3;
+    src: url(ofont.ru_Saytag.ttf);
 }
