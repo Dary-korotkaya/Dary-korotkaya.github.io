@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Анкета участника мероприятия</h1>
+
+        <form action="/submit" method="post">
+
+            <fieldset>
+                <legend>Личные данные</legend>
+
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Участие</legend>
+
+                <label>Выберите роль:</label><br>
+                <input type="radio" id="role1" name="role" value="участник">
+                <label for="role1">Участник</label><br>
+                <input type="radio" id="role2" name="role" value="организатор">
+                <label for="role2">Организатор</label><br>
+
+                <label for="file">Загрузите файл с резюме:</label>
+                <input type="file" id="file" name="resume"><br>
+
+                <label for="subscribe">Подписаться на новости:</label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Отправка анкеты</legend>
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
