@@ -1,9 +1,14 @@
 html {
   font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-  margin: 100px;
+  margin: 50px auto;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -27,7 +32,7 @@ h1 {
 }
 
 button {
-  margin: 50px;
+  margin: 200px;
   font-size: 20px;
   background-color: red;
   animation: vibrate 0.1s infinite;
@@ -74,35 +79,27 @@ a:hover::before {
   left: 0;
 }
 
-/* Мячик */
-.ball {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  border-radius: 50%;
-  position: relative;
-  animation: bounce 4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
-  margin-top: 50px;
+.ball{
+  height: 70px;
+  width: 70px;
+  background-color: #2d2d2d;
+  border-radius: 100%;
+  margin-left: 2em;
+  animation: bounce 5s linear infinite;
 }
-
-/* Анимация падения и отскока */
 @keyframes bounce {
-  0% {
-      transform: translateY(0);
-  }
-  60% {
-      transform: translateY(300px) scaleY(0.8);
-  }
-  70% {
-      transform: translateY(300px) scaleY(1.2);
-  }
-  80% {
-      transform: translateY(150px) scaleY(1);
-  }
-  90% {
-      transform: translateY(150px) scaleY(0.9);
-  }
-  100% {
-      transform: translateY(0) scaleY(1);
-  }
+  0% { transform: translateY(0px);height: 70px;width: 70px; animation-timing-function:ease-in}
+  39.5% { transform: translateY(600px);height: 60px;width: 70px }
+  40% { transform: translateY(600px);height: 35px;width: 80px }
+  41% { transform: translateY(600px);height: 60px;width: 70px; animation-timing-function: ease-out }
+  59.5% { transform: translateY(200px);height: 70px;width: 70px}
+  60% { transform: translateY(200px);height: 70px;width: 70px; animation-timing-function: ease-in}
+  79% { transform: translateY(600px);height: 60px;width: 70px }
+  80% { transform: translateY(600px);height: 50px;width: 74px }
+  81% { transform: translateY(600px);height: 60px;width: 70px; animation-timing-function: ease-out }
+  90% { transform: translateY(400px);height: 70px;width: 70px }
+  91% { transform: translateY(400px);height: 70px;width: 70px; animation-timing-function: ease-in }
+  97% { transform: translateY(590px);height: 66px;width: 70px }
+  99% { transform: translateY(600px);height: 65px;width: 71px }
+  100% { transform: translateY(600px);height: 70px;width: 70px }
 }
