@@ -1,0 +1,108 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 100px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+
+header {
+  margin: 0;
+  background: rgb(1, 0, 88);
+  height: 100px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+button {
+  margin: 50px;
+  font-size: 20px;
+  background-color: red;
+  animation: vibrate 0.1s infinite;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+button:hover {
+  animation: none;
+  background-color: green;
+  cursor: pointer;
+}
+
+a {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: green;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: green;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Мячик */
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 4s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+  margin-top: 50px;
+}
+
+/* Анимация падения и отскока */
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  60% {
+      transform: translateY(300px) scaleY(0.8);
+  }
+  70% {
+      transform: translateY(300px) scaleY(1.2);
+  }
+  80% {
+      transform: translateY(150px) scaleY(1);
+  }
+  90% {
+      transform: translateY(150px) scaleY(0.9);
+  }
+  100% {
+      transform: translateY(0) scaleY(1);
+  }
+}
