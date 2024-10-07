@@ -87,6 +87,7 @@ a:hover::before {
   margin-left: 2em;
   animation: bounce 5s linear infinite;
 }
+/*добавить timing fiction с easy-in/out ускор в сер/зам к концу*/
 @keyframes bounce {
   0% { transform: translateY(0px);height: 70px;width: 70px; animation-timing-function:ease-in}
   39.5% { transform: translateY(600px);height: 60px;width: 70px }
